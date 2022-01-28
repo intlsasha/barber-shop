@@ -199,7 +199,6 @@
   right: 1px;
   background-color: transparent;
   border: none;
-  color: inherit;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -207,7 +206,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: $txt-black;
+    color: $txt-white;
     background-color: $accent-color;
   }
 }
