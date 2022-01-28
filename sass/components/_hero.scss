@@ -1,0 +1,126 @@
+.hero {
+  &__wrapper {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__list {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 30px;
+      bottom: 0;
+      transform: rotate(-90deg);
+      transform-origin: top left;
+
+      &::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+        background-color: $txt-black;
+      }
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      margin-left: 40px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: $txt-black;
+  }
+
+  &--left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 0;
+    padding: 0;
+    width: 96px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 38px;
+    }
+  }
+
+  &--right {
+    margin: 0;
+    width: 1072px;
+    @media screen and (max-width: 767px) {
+      padding-top: 208px;
+      padding-bottom: 183px;
+    }
+
+    padding-top: 280px;
+    padding-bottom: 234px;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 70px;
+      background-image: url('../images/header1-tab.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/header1-tab@2x.jpg');
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-left: 96px;
+      background-image: url('../images/header1-desk.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/header1-desk@2x.jpg');
+      }
+    }
+  }
+
+  &__pre-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-bot;
+    @include pre-title;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      background-color: $txt-black;
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: $margin-bot;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: $txt-white;
+  }
+
+  &__post-title {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.02em;
+    color: $post-title-light;
+
+    @media screen and (min-width: 450px) {
+      width: 264px;
+    }
+  }
+}

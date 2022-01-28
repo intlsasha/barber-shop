@@ -1,0 +1,97 @@
+.form {
+  &__title {
+    @include title;
+    color: $txt-white;
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  &__label {
+    @include pre-title;
+    transition: color 250ms linear;
+  }
+
+  &__pos-wrapper {
+    position: relative;
+
+    &--margin {
+      margin-bottom: 44px;
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+        width: calc(50% - 15px);
+      }
+    }
+
+    &--margin-right {
+      @media screen and (min-width: 768px) {
+        margin-right: 25px;
+      }
+    }
+
+    &--margin-last {
+      margin-bottom: 112px;
+    }
+  }
+
+  &__input {
+    padding-bottom: 4px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    @include pre-title;
+    color: $txt-white;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    resize: none;
+
+    transition: border-bottom 250ms linear;
+
+    &--name {
+      padding-left: 40px;
+    }
+
+    &--tel {
+      padding-left: 72px;
+    }
+
+    &--comment {
+      padding-left: 86px;
+    }
+  }
+
+  &__button {
+    @include button;
+    color: $txt-white;
+    display: block;
+    margin: auto;
+    padding-left: 38px;
+    padding-right: 38px;
+    background-color: transparent;
+    transition: background-color 250ms linear;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      margin-right: auto;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $accent-color;
+    }
+  }
+}
+
+.form__pos-wrapper:hover .form__label,
+.form__pos-wrapper:focus .form__label,
+.form__pos-wrapper:focus-within .form__label {
+  color: $txt-white;
+}
+
+.form__pos-wrapper:hover .form__input,
+.form__pos-wrapper:focus .form__input,
+.form__pos-wrapper:focus-within .form__input {
+  border-bottom: 1px solid $txt-white;
+}

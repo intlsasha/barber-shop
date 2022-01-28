@@ -1,0 +1,67 @@
+.contacts {
+  &__title {
+    margin-bottom: 40px;
+    @include title;
+    color: $txt-white;
+  }
+
+  &__address {
+    margin-bottom: 44px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $post-title-light;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $post-title-light;
+
+    &:not(:last-child) {
+      margin-bottom: $margin-bot;
+    }
+
+    &--underline {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+  }
+}
+
+.hours {
+  &__text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $txt-white;
+    &::before {
+      content: '';
+      width: 60px;
+      height: 1px;
+      margin-right: $margin-bot;
+      background-color: rgba(157, 164, 189, 0.4);
+    }
+  }
+
+  &__time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $post-title-light;
+  }
+}

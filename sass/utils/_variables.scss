@@ -1,0 +1,51 @@
+$bg-light: #f7f7f7;
+$bg-dark: #191c26;
+$txt-black: #303030;
+$txt-white: #ffffff;
+$accent-color: #ff6c00;
+$post-title-dark: #555555;
+$post-title-light: #9da4bd;
+$margin-bot: 20px;
+
+@mixin txt-white {
+  color: $txt-white;
+}
+
+@mixin txt-black {
+  color: txt-black;
+}
+
+@mixin pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+@mixin post-title {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+@mixin title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+@mixin button {
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #303030;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+}

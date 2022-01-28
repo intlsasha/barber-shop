@@ -1,0 +1,43 @@
+.gallery {
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: 1280px) {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+  }
+
+  &__pre-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+    @include pre-title;
+    line-height: 1.91;
+    color: $txt-black;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      background-color: $txt-black;
+      margin-right: 20px;
+    }
+  }
+}

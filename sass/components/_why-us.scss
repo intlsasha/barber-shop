@@ -1,0 +1,126 @@
+.why-us {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  &__pre-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-bot;
+    @include pre-title;
+    color: $txt-black;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      background-color: $txt-black;
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: $margin-bot;
+    @include title;
+    color: $txt-black;
+  }
+
+  &__post-title {
+    margin-bottom: 44px;
+    @include post-title;
+    color: $post-title-dark;
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  &__wrapper {
+    @media screen and (min-width: 768px) {
+      width: 500px;
+    }
+  }
+
+  &__list {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 479px) {
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 480px;
+      margin-left: auto;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin: 0;
+      flex-basis: calc((100% - 65px) / 2);
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 479px) {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 80%;
+    }
+
+    background-color: $bg-light;
+    text-align: center;
+    padding: 20px 32px;
+    margin-left: 15px;
+    margin-right: 15px;
+    flex-basis: calc((100% - 15px * 4) / 2);
+
+    @media screen and (max-width: 479px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 480px) {
+      &:nth-child(even) {
+        margin-top: 30px;
+      }
+    }
+
+    @media screen and (min-width: 480px) {
+      &:nth-child(odd) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      flex-basis: 170px;
+    }
+  }
+
+  &__number {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+    color: $txt-black;
+
+    &::after {
+      content: '+';
+      color: $accent-color;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.38;
+      vertical-align: text-top;
+    }
+  }
+
+  &__stat {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: $txt-black;
+  }
+}

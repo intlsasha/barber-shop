@@ -1,0 +1,225 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav {
+  &__list {
+    margin-bottom: 64px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      // margin-right: 48px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 0;
+      margin-left: 136px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.1em;
+    color: $txt-black;
+
+    @media screen and (min-width: 768px) {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 0.1em;
+      color: $txt-white;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 24px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 24px;
+    }
+  }
+}
+
+.contact {
+  margin-bottom: 64px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 0;
+    margin-left: 48px;
+    padding-top: 40px;
+    &__item:not(:last-child) {
+      margin-bottom: $margin-bot;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+    margin-left: 318px;
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $txt-black;
+
+    @media screen and (min-width: 768px) {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 0.09em;
+      color: $txt-white;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 40px;
+    }
+  }
+  &__button {
+    @include button;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: $margin-bot;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: $txt-white;
+      margin-right: auto;
+      background-color: transparent;
+      transition: color 250ms linear, background-color 250ms linear;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $accent-color;
+    }
+  }
+}
+
+.socials {
+  position: absolute;
+  bottom: 27%;
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    bottom: 0;
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    width: 63px;
+    height: 1px;
+    background-color: $txt-black;
+    margin-right: 40px;
+    position: relative;
+    top: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.38;
+    letter-spacing: 0.2em;
+    color: $txt-black;
+  }
+}
+
+// mobile-menu
+
+.menu {
+  padding: 118px 103px 0px 50px;
+  margin: 0 auto;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  fill: red;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 48px;
+  right: 1px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $txt-black;
+    background-color: $accent-color;
+  }
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}

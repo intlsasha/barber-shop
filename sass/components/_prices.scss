@@ -1,0 +1,100 @@
+.prices {
+  &__pre-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-bot;
+    @include pre-title;
+    color: rgba(157, 164, 189, 0.6);
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      background-color: rgba(157, 164, 189, 0.6);
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include title;
+    color: $txt-white;
+  }
+
+  &__bg {
+    padding: 30px;
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 768px) {
+      padding: 30px 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      background: none;
+      padding: 0;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: 1280px) {
+      flex-basis: 585px;
+      padding: 30px 40px;
+
+      &--left {
+        background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+      }
+
+      &--right {
+        background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @include post-title;
+    font-size: 14px;
+    line-height: 2.14;
+    color: $post-title-light;
+
+    &:not(:last-child) {
+      margin-bottom: $margin-bot;
+    }
+
+    &--margin {
+      margin-bottom: $margin-bot;
+    }
+  }
+
+  &__item::before {
+    content: ' ';
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+    flex-grow: 1;
+    margin: 0 6px;
+  }
+
+  &__type {
+    order: -1;
+  }
+
+  &__button {
+    @include button;
+    color: $txt-white;
+    display: block;
+    margin: auto;
+    background-color: transparent;
+
+    transition: background-color 250ms linear;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $accent-color;
+    }
+  }
+}

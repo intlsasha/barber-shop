@@ -1,0 +1,101 @@
+.about-us {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    &__pics {
+      flex-basis: calc(50% - 15px);
+    }
+
+    &__info {
+      flex-basis: calc(50% - 15px);
+    }
+  }
+
+  &__pre-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-bot;
+    @include pre-title;
+    color: $txt-black;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      background-color: $txt-black;
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: $margin-bot;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+    color: $txt-black;
+  }
+
+  &__post-title {
+    @include post-title;
+    font-size: 16px;
+    line-height: 1.62;
+    color: $post-title-dark;
+
+    &--smaller-text {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $margin-bot;
+    }
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    @include button;
+    background-color: transparent;
+
+    transition: color 250ms linear, background-color 250ms linear;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $txt-white;
+      background-color: $accent-color;
+    }
+  }
+}
+
+.pics {
+  &__list {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    @media screen and (min-width: 1280px) {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
