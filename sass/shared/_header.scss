@@ -61,6 +61,7 @@
     align-items: center;
     margin-bottom: 0;
     margin-left: 48px;
+    margin-right: 24px;
     padding-top: 40px;
     &__item:not(:last-child) {
       margin-bottom: $margin-bot;
@@ -71,7 +72,8 @@
     flex-direction: row;
     align-items: center;
     padding-top: 0;
-    margin-left: 318px;
+    margin-left: 268px;
+    margin-right: 0;
   }
 
   &__tel {
