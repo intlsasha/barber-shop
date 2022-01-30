@@ -290,6 +290,10 @@ address {
   overflow: hidden;
 }
 
+.footer {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.899597) 5%, rgba(0, 0, 0, 0.739933) 96%);
+}
+
 @media screen and (max-width: 479px) {
   .footer {
     padding: 44px 0;
@@ -315,7 +319,7 @@ address {
   width: 60px;
   height: 1px;
   margin-right: 40px;
-  background-color: #303030;
+  background-color: #9da4bd;
 }
 
 @media screen and (min-width: 480px) {
@@ -342,7 +346,7 @@ address {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-  color: #303030;
+  color: #9da4bd;
 }
 
 .header {
@@ -1906,5 +1910,14 @@ address {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.map {
+  display: block;
+  line-height: 0;
+}
+
+.iframe-map {
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,9 @@
 .footer {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.8995973389355743) 5%,
+    rgba(0, 0, 0, 0.7399334733893557) 96%
+  );
   @media screen and (max-width: 479px) {
     padding: 44px 0;
   }
@@ -14,7 +19,7 @@
       width: 60px;
       height: 1px;
       margin-right: 40px;
-      background-color: $txt-black;
+      background-color: $post-title-light;
     }
   }
 
@@ -42,6 +47,6 @@
     font-size: 11px;
     line-height: 1.36;
     letter-spacing: 0.2em;
-    color: $txt-black;
+    color: $post-title-light;
   }
 }
