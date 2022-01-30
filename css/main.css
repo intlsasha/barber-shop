@@ -483,7 +483,7 @@ address {
 }
 
 .contact__button {
-  padding: 20px 20px;
+  padding: 20px 20px 19px 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 0;
@@ -1146,7 +1146,7 @@ address {
 }
 
 .about-us__button {
-  padding: 20px 20px;
+  padding: 20px 20px 19px 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 0;
@@ -1314,7 +1314,7 @@ address {
 }
 
 .prices__button {
-  padding: 20px 20px;
+  padding: 20px 20px 19px 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 0;
@@ -1781,7 +1781,7 @@ address {
 }
 
 .form__button {
-  padding: 20px 20px;
+  padding: 20px 20px 19px 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 0;
