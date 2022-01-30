@@ -277,14 +277,17 @@ address {
 }
 
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @media screen and (max-width: 479px) {
@@ -602,7 +605,6 @@ address {
   right: 1px;
   background-color: transparent;
   border: none;
-  color: inherit;
 }
 
 @media screen and (min-width: 768px) {
@@ -612,7 +614,7 @@ address {
 }
 
 .menu-button:hover, .menu-button:focus, .menu-button:active {
-  color: #303030;
+  color: #ffffff;
   background-color: #ff6c00;
 }
 
@@ -639,6 +641,258 @@ address {
     position: absolute;
     left: 15px;
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  min-width: 300px;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 600px;
+  }
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.modal__close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: 1px solid #555555;
+  border-radius: 50%;
+  font-weight: inherit;
+  -webkit-transition: font-weight 250ms linear, border 250ms linear;
+  transition: font-weight 250ms linear, border 250ms linear;
+}
+
+.modal__close:hover, .modal__close:focus {
+  font-weight: 600;
+  border: 1px solid #ff6c00;
+}
+
+.modal__title {
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.modal__label {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.modal__input, .modal__select {
+  line-height: 1.67;
+  margin-bottom: 12px;
+  padding: 12px;
+  padding-left: 28px;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  -webkit-transition: border 250ms linear;
+  transition: border 250ms linear;
+}
+
+.modal__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #303030;
+  opacity: 0.9;
+}
+
+.modal__input:hover, .modal__input:focus-within {
+  border: 1px solid #ff6c00;
+}
+
+.modal__select:hover, .modal__select:focus-within {
+  border: 1px solid #ff6c00;
+}
+
+.modal__input:hover + .modal__icon,
+.modal__input:focus-within + .modal__icon {
+  fill: #ff6c00;
+}
+
+.modal__select:hover + .modal__icon,
+.modal__select:focus-within + .modal__icon {
+  fill: #ff6c00;
+}
+
+.modal__option,
+.modal ::-webkit-input-placeholder {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #303030;
+  opacity: 0.9;
+}
+
+.modal__option,
+.modal :-ms-input-placeholder {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #303030;
+  opacity: 0.9;
+}
+
+.modal__option,
+.modal ::-ms-input-placeholder {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #303030;
+  opacity: 0.9;
+}
+
+.modal__option,
+.modal ::placeholder {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #303030;
+  opacity: 0.9;
+}
+
+.modal__icon {
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  fill: #303030;
+  -webkit-transition: fill 250ms linear;
+  transition: fill 250ms linear;
+}
+
+.modal__comment {
+  height: 200px;
+  resize: none;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  padding: 12px 6px;
+  -webkit-transition: border 250ms linear;
+  transition: border 250ms linear;
+}
+
+.modal__comment:hover, .modal__comment:focus-within {
+  border: 1px solid #ff6c00;
+}
+
+.modal__opt-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.modal__check {
+  fill: #ffffff;
+  border: 2px solid #303030;
+  border-radius: 2px;
+  -webkit-transition: border 250ms linear, background-color 250ms linear;
+  transition: border 250ms linear, background-color 250ms linear;
+}
+
+.modal__checkbox:checked + .modal__check {
+  background-color: #ff6c00;
+  border: none;
+}
+
+.modal__submit {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 1px solid #ff6c00;
+  border-radius: 4px;
+  color: #303030;
+  -webkit-transition: background-color 250ms linear, color 250ms linear;
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+.modal__submit:hover, .modal__submit:focus {
+  background-color: #ff6c00;
+  color: #ffffff;
+}
+
+.modal-field-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.wtf {
+  fill: red;
 }
 
 .hero__wrapper {
@@ -1558,6 +1812,11 @@ address {
   border-bottom: 1px solid #ffffff;
 }
 
+.contacts__links:hover .contacts__icon,
+.contacts__links:focus .contacts__icon {
+  stroke: #ff6c00;
+}
+
 .contacts__title {
   margin-bottom: 40px;
   font-family: 'Raleway';
@@ -1577,10 +1836,14 @@ address {
   color: #9da4bd;
 }
 
+.contacts__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .contacts__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1600,7 +1863,10 @@ address {
 }
 
 .contacts__icon {
+  stroke: #9da4bd;
   margin-right: 16px;
+  -webkit-transition: stroke 250ms linear;
+  transition: stroke 250ms linear;
 }
 
 .hours__text {

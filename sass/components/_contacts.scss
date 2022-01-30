@@ -1,4 +1,9 @@
 .contacts {
+  &__links:hover &__icon,
+  &__links:focus &__icon {
+    stroke: $accent-color;
+  }
+
   &__title {
     margin-bottom: 40px;
     @include title;
@@ -14,8 +19,12 @@
     color: $post-title-light;
   }
 
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   &__links {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-weight: 400;
     font-size: 18px;
@@ -33,7 +42,10 @@
   }
 
   &__icon {
+    stroke: $post-title-light;
     margin-right: 16px;
+
+    transition: stroke 250ms linear;
   }
 }
 
