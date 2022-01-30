@@ -483,10 +483,10 @@ address {
 }
 
 .contact__button {
-  padding: 13px 20px;
+  padding: 20px 20px;
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 0;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #303030;
@@ -500,7 +500,6 @@ address {
     margin-bottom: 20px;
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.33;
     letter-spacing: 0.09em;
     text-transform: uppercase;
     color: #ffffff;
@@ -1147,10 +1146,10 @@ address {
 }
 
 .about-us__button {
-  padding: 13px 20px;
+  padding: 20px 20px;
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 0;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #303030;
@@ -1315,10 +1314,10 @@ address {
 }
 
 .prices__button {
-  padding: 13px 20px;
+  padding: 20px 20px;
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 0;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #303030;
@@ -1782,10 +1781,10 @@ address {
 }
 
 .form__button {
-  padding: 13px 20px;
+  padding: 20px 20px;
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 0;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #303030;
