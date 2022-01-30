@@ -654,6 +654,12 @@ address {
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    z-index: 1;
+  }
+}
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;

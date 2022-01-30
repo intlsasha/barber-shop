@@ -6,6 +6,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
+
+  @media screen and (max-width: 767px) {
+    z-index: 1;
+  }
 }
 
 .is-hidden {
